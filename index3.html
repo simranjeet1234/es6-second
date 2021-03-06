@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3rdt</title>
+</head>
+<body>
+    <Script>
+        class person {
+            constructor(name,age){
+                this.name=name;
+                this.age=age;
+            }
+            getname(){
+               return "my name is :  " + this.name +  "-and i am " + this.age;
+            } 
+        }
+
+        class headprogrammer extends person {
+            constructor(name,age,yearofexperience){
+                super(name,age);
+                this.yearofexperience = yearofexperience;
+            }
+            getname2(){
+                return "my name is : " + this.name + " & my age is "+this.age +"plus i  have  experience of" + this.yearofexperience;
+            }
+
+        }
+        class juniorprogrammer extends headprogrammer {
+            constructor(name,age,yearofexperience,profile){
+                super(name,age,yearofexperience);
+                this.profile=profile;
+                
+            }
+            getname3(){
+                return super.getname2() + "i work as a:" + this.profile;
+            }
+
+        }
+        let person1 = new person("simran", 21 );
+        let headprogrammer1 = new headprogrammer("aman",25,4);
+        let juniorprogrammer1 = new juniorprogrammer("labi",22,1,"front end engineer");
+
+        console.log(person1.getname());
+        console.log(headprogrammer1.getname2());
+        console.log(juniorprogrammer1.getname3());
+    
+       
+    </Script>
+</body>
+</html>
